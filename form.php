@@ -9,16 +9,16 @@
 	$message = trim(htmlspecialchars(strip_tags($_POST['message'])));
 	if (!empty($email) && !empty($name) && !empty($subject) && !empty($message)) {
 		if (mb_strlen($email) < 100 && mb_strlen($name) < 100 && mb_strlen($subject) < 100 && mb_strlen($message) < 1000) {
-			echo "<script>msg('Вы успешно отправили сообщение. Спасибо!', 'success', 'Отлично!');</script>";
-			$text = "Новая заявка с сайта, имя: $name \n $message \n Контактная почта: $email.";
+			echo "<script>msg('Р’С‹ СѓСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІРёР»Рё СЃРѕРѕР±С‰РµРЅРёРµ. РЎРїР°СЃРёР±Рѕ!', 'success', 'РћС‚Р»РёС‡РЅРѕ!');</script>";
+			$text = "РќРѕРІР°СЏ Р·Р°СЏРІРєР° СЃ СЃР°Р№С‚Р°, РёРјСЏ: $name \n $message \n РљРѕРЅС‚Р°РєС‚РЅР°СЏ РїРѕС‡С‚Р°: $email.";
 			mail("igolnikov.dmitriy@inbox.ru", $subject, $text);
 		}
 		else {
-			echo "<script>msg('Слишком много символов в поле.', 'error', 'Ошибка!');</script>";
+			echo "<script>msg('РЎР»РёС€РєРѕРј РјРЅРѕРіРѕ СЃРёРјРІРѕР»РѕРІ РІ РїРѕР»Рµ.', 'error', 'РћС€РёР±РєР°!');</script>";
 		}
 	}
 	else {
-		echo "<script>msg('Вы не заполнили все поля.', 'error', 'Ошибка!');</script>";
+		echo "<script>msg('Р’С‹ РЅРµ Р·Р°РїРѕР»РЅРёР»Рё РІСЃРµ РїРѕР»СЏ.', 'error', 'РћС€РёР±РєР°!');</script>";
 	}
 	?>
 
